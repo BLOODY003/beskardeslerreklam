@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BeşKardeşler Reklam — tabela, ışıklı tabela, kutu harf, araç giydirme ve reklam uygulamaları.">
+<title>BeşKardeşlerReklam | Markanıza Değer Katar</title>
+<style>
+:root{--bg:#0a0a0b;--card:#141416;--line:#29292d;--text:#f5f5f5;--muted:#a6a6ad;--accent:#f4b400;--accent2:#ffd45c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(10,10,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-.7px;font-size:22px}.logo span{color:var(--accent)}
+nav{display:flex;gap:28px;color:#ddd;font-size:14px}
+nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:9px;font-weight:800;background:var(--accent);color:#111;border:1px solid var(--accent);transition:.2s}
+.btn:hover{transform:translateY(-2px);background:var(--accent2)}
+.btn.dark{background:transparent;color:#fff;border-color:#45454a}
+.hero{min-height:760px;padding:170px 0 100px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+radial-gradient(circle at 75% 35%,rgba(244,180,0,.16),transparent 28%),
+linear-gradient(135deg,#0a0a0b 0%,#101012 55%,#09090a 100%)}
+.hero:after{content:"";position:absolute;right:-180px;bottom:-260px;width:620px;height:620px;border:1px solid rgba(244,180,0,.22);border-radius:50%;box-shadow:0 0 0 70px rgba(244,180,0,.025),0 0 0 140px rgba(244,180,0,.018)}
+.eyebrow{color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:12px;margin-bottom:18px}
+h1{font-size:clamp(44px,7vw,78px);line-height:.98;letter-spacing:-4px;max-width:780px}
+h1 span{color:var(--accent)}
+.lead{font-size:19px;color:#c1c1c7;max-width:650px;margin:25px 0 34px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:36px;margin-top:60px;flex-wrap:wrap}.stat strong{display:block;font-size:26px}.stat small{color:var(--muted)}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+h2{font-size:clamp(32px,5vw,52px);line-height:1.05;letter-spacing:-2px;margin-top:8px}
+.section-head p{color:var(--muted);max-width:420px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,#171719,#111113);border:1px solid var(--line);border-radius:18px;padding:28px;min-height:210px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#555}
+.icon{font-size:30px;margin-bottom:22px}.card h3{font-size:20px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+.projects{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:250px 250px;gap:16px}
+.project{border-radius:18px;border:1px solid var(--line);overflow:hidden;position:relative;background:
+linear-gradient(135deg,rgba(244,180,0,.9),rgba(20,20,22,.95) 55%),#171719}
+.project:nth-child(2){background:linear-gradient(135deg,#242426,#111113)}
+.project:nth-child(3){background:linear-gradient(135deg,#111113,#34343a)}
+.project:nth-child(4){background:linear-gradient(135deg,#34343a,#151517)}
+.project:nth-child(5){background:linear-gradient(135deg,#151517,#252527)}
+.project:first-child{grid-row:span 2}
+.project:after{content:"PROJE";position:absolute;right:18px;top:15px;font-weight:900;font-size:11px;letter-spacing:2px;opacity:.5}
+.project .label{position:absolute;left:22px;bottom:18px;font-weight:900;font-size:20px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about p{color:var(--muted);margin:20px 0}
+.checks{display:grid;gap:12px}.check{padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#111113}.check b{color:var(--accent)}
+.cta{border:1px solid #3b3b3f;border-radius:24px;padding:55px;background:radial-gradient(circle at 85% 50%,rgba(244,180,0,.16),transparent 30%),#111113;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta p{color:var(--muted);max-width:570px;margin-top:12px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{padding:30px;border:1px solid var(--line);border-radius:18px;background:#111113}.contact-card small{color:var(--muted)}.contact-card a{display:block;font-size:24px;font-weight:900;margin-top:5px}.contact-card a:hover{color:var(--accent)}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#777;font-size:13px}
+@media(max-width:800px){nav{display:none}.hero{min-height:700px}.grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px}.project:first-child{grid-row:span 2}.about,.contact{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:15px}.cta{display:block}.cta .btn{margin-top:25px}}
+@media(max-width:520px){.projects{grid-template-columns:1fr;grid-template-rows:200px 160px 160px 160px 160px}.project:first-child{grid-row:auto}.hero{padding-top:130px}h1{letter-spacing:-2.5px}}
+/* Kutuların kendi siyah arka plan rengini iptal edip resmi öne çıkarır */
+.projects .project {
+  background-size: cover !important;
+  background-position: center !important;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.project .label {
+  z-index: 2;
+}
+
+.project::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10,10,11,0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+/* Slayt ve Görsel Düzenlemeleri */
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.slide-img.active {
+  opacity: 1;
+}
+
+.project::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10,10,11,0.85) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.project .label {
+  z-index: 3;
+}
+/* Aktif olmayan resimleri gizler, slaytı çalıştırır */
+.slideshow .slide-img {
+  display: none;
+}
+.slideshow .slide-img.active {
+  display: block;
+}
+/* Slayt Geçişi İçin Şart Olan CSS */
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow .slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.slideshow .slide-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.project .label {
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="logo" href="#anasayfa">BEŞ<span>KARDEŞLER</span></a>
+<nav><a href="#hizmetler">Hizmetler</a><a href="#projeler">Projeler</a><a href="#hakkimizda">Hakkımızda</a><a href="#iletisim">İletişim</a></nav>
+<a class="btn" href="tel:+905324003448">Ara</a>
+</div></header>
+
+<main id="anasayfa">
+<section class="hero"><div class="container">
+<div class="eyebrow">BeşKardeşler Reklam</div>
+<h1>Markanıza <span>Değer</span> Katar.</h1>
+<p class="lead">Tabela, ışıklı tabela, kutu harf, araç uygulamaları ve reklam çözümleriyle işletmenize güçlü bir kimlik kazandırıyoruz.</p>
+<div class="actions"><a class="btn" href="#iletisim">Teklif Al</a><a class="btn dark" href="#hizmetler">Hizmetleri İncele</a></div>
+<div class="stats"><div class="stat"><strong>Profesyonel</strong><small>Tasarım & uygulama</small></div><div class="stat"><strong>Özenli</strong><small>İşçilik anlayışı</small></div><div class="stat"><strong>Hızlı</strong><small>Çözüm odaklı hizmet</small></div></div>
+</div></section>
+
+<section id="hizmetler"><div class="container">
+<div class="section-head"><div><div class="kicker">Neler yapıyoruz?</div><h2>Reklamın her alanında<br>yanınızdayız.</h2></div><p>İşletmenizin dışarıdan ilk bakışta güçlü görünmesi için tasarımdan üretime kadar bütün süreci tek noktadan yönetiyoruz.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">✦</div><h3>Işıklı Tabela</h3><p>Gündüz ve gece dikkat çeken, işletmenizin kimliğine uygun modern tabela çözümleri.</p></div>
+<div class="card"><div class="icon">▣</div><h3>Kutu Harf</h3><p>Hacimli ve premium görünüm sağlayan kutu harf uygulamaları.</p></div>
+<div class="card"><div class="icon">▤</div><h3>Araç Giydirme</h3><p>Aracınızı hareketli bir reklam alanına dönüştüren profesyonel uygulamalar.</p></div>
+<div class="card"><div class="icon">◈</div><h3>Dijital Baskı</h3><p>İç ve dış mekân kullanımına uygun baskı ve folyo çözümleri.</p></div>
+<div class="card"><div class="icon">⌁</div><h3>Yönlendirme</h3><p>İşletme içi ve dışı yönlendirme, levha ve bilgilendirme uygulamaları.</p></div>
+<div class="card"><div class="icon">✎</div><h3>Özel Tasarım</h3><p>Markanıza özel tasarım fikirlerini üretim aşamasına taşıyoruz.</p></div>
+</div></div></section>
+
+<section id="projeler">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Portföy</div>
+        <h2>İşlerimiz konuşsun.</h2>
+      </div>
+    </div>
+    <div class="projects">
+
+      <!-- 1. Tabela & Cephe (3 Fotoğraf) -->
+      <div class="project slideshow">
+        <img class="slide-img active" src="gursu-totem.jpg" alt="">
+        <img class="slide-img" src="gursu2.jpg" alt="">
+        <img class="slide-img" src="tas-zamani-totem.jpg" alt="">
+        <div class="label">Tabela & Cephe</div>
+      </div>
+
+      <!-- 2. Kutu Harf (2 Fotoğraf) -->
+      <div class="project slideshow">
+        <img class="slide-img active" src="isikli-kutu-harf.jpg" alt="">
+        <img class="slide-img" src="isikli-kutu-harf2.jpg" alt="">
+        <div class="label">Kutu Harf</div>
+      </div>
+
+      <!-- 3. Işıklı Reklam (5 Fotoğraf) -->
+      <div class="project slideshow">
+        <img class="slide-img active" src="Desen-isikli-kutu.jpg" alt="">
+        <img class="slide-img" src="eryilmaz.jpg" alt="">
+        <img class="slide-img" src="ada-motors.jpg" alt="">
+        <img class="slide-img" src="kan-alma.jpg" alt="">
+        <img class="slide-img" src="moni1.jpg" alt="">
+        <img class="slide-img" src="moni2.jpg" alt="">
+        <div class="label">Işıklı Reklam</div>
+      </div>
+
+      <!-- 4. Araç Uygulama (8 Fotoğraf) -->
+      <div class="project slideshow">
+        <img class="slide-img active" src="ford-kaplama.jpg" alt="">
+        <img class="slide-img" src="ford2.jpg" alt="">
+        <img class="slide-img" src="ford3.jpg" alt="">
+        <img class="slide-img" src="ford4.jpg" alt="">
+        <img class="slide-img" src="ford5.jpg" alt="">
+        <img class="slide-img" src="ford6.jpg" alt="">
+        <img class="slide-img" src="korkmaz-arac.jpg" alt="">
+        <img class="slide-img" src="bmw-kaplama.jpg" alt="">
+        <div class="label">Araç Uygulama</div>
+      </div>
+
+      <!-- 5. Dijital Baskı (5 Fotoğraf) -->
+      <div class="project slideshow">
+        <img class="slide-img active" src="baskı1.jpeg" alt="">
+        <img class="slide-img" src="baskı2.jpeg" alt="">
+        <img class="slide-img" src="baskı3.jpeg" alt="">
+        <img class="slide-img" src="baskı4.jpeg" alt="">
+        <img class="slide-img" src="baskı5.jpeg" alt="">
+        <div class="label">Dijital Baskı</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="hakkimizda"><div class="container about">
+<div><div class="kicker">BeşKardeşler</div><h2>İşletmenizin ilk izlenimini güçlendiriyoruz.</h2><p>BeşKardeşler Reklam olarak tabela ve görsel iletişim çözümlerini estetik, sağlamlık ve işlevsellik odağında ele alıyoruz.</p><a class="btn" href="tel:+905324003448">0532 400 34 48</a></div>
+<div class="checks"><div class="check"><b>01</b> Tasarım odaklı yaklaşım</div><div class="check"><b>02</b> Üretim ve uygulama</div><div class="check"><b>03</b> İşletmeye özel çözümler</div><div class="check"><b>04</b> Hızlı iletişim</div></div>
+</div></section>
+
+<section><div class="container"><div class="cta"><div><div class="kicker">Projeniz hazır mı?</div><h2>Markanızı birlikte öne çıkaralım.</h2><p>Ne yapmak istediğinizi anlatın; uygun reklam uygulaması için iletişime geçin.</p></div><a class="btn" href="https://wa.me/905324003448?text=Merhaba%20Beş%20Kardeşler%20Reklam%2C%20bir%20proje%20için%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp’tan Yaz</a></div></div></section>
+
+<section id="iletisim"><div class="container">
+<div class="section-head"><div><div class="kicker">İletişim</div><h2>Bir telefon kadar yakınız.</h2></div></div>
+<div class="contact">
+<div class="contact-card"><small>Telefon</small><a href="tel:+905324003448">0532 400 34 48</a></div>
+<div class="contact-card"><small>Yetkili</small><a href="tel:+905324003448">Osman Beşkardeş</a></div>
+</div>
+</div></section>
+</main>
+<footer><div class="container">© 2026 BeşKardeşler Reklam — Tüm hakları saklıdır.</div></footer>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.slideshow').forEach(card => {
+      const images = card.querySelectorAll('.slide-img');
+      if (images.length <= 1) return;
+      
+      let currentIndex = 0;
+      setInterval(() => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+      }, 2500);
+    });
+  });
+</script>
+</body>
+</html>
